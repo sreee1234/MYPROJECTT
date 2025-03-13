@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Theme Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('love-background.jpg') no-repeat center center/cover;
+        }
+        #login-container, #gallery-container {
+            margin: 50px auto;
+            width: 300px;
+            padding: 20px;
+            background: rgba(255, 192, 203, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px red;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.2);
+        }
+        #love-message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <div id="gallery-container" class="hidden">
+        <h2>Love Moments 💖</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Love Image 1" onclick="showMessage('Love is in the air!')">
+            <img src="image2.jpg" alt="Love Image 2" onclick="showMessage('You are loved!')">
+            <img src="image3.jpg" alt="Love Image 3" onclick="showMessage('Love knows no limits!')">
+            <img src="image4.jpg" alt="Love Image 4" onclick="showMessage('Together forever!')">
+            <img src="image5.jpg" alt="Love Image 5" onclick="showMessage('Love conquers all!')">
+        </div>
+        <p id="love-message"></p>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'user' && password === 'love123') {
+                document.getElementById('login-container').classList.add('hidden');
+                document.getElementById('gallery-container').classList.remove('hidden');
+            } else {
+                document.getElementById('error-message').innerText = 'Invalid username or password!';
+            }
+        }
+
+        function showMessage(message) {
+            document.getElementById('love-message').innerText = message;
+        }
+    </script>
+</body>
+</html>
