@@ -17,7 +17,7 @@
             overflow: hidden;
         }
 
-        /* Video Background for Login - Optimized for mobile */
+        /* Video Background for Login */
         .video-background {
             position: fixed;
             top: 0;
@@ -29,18 +29,7 @@
             display: block; /* Ensure it's visible at the start */
         }
 
-        /* Fallback background for devices that can't play video */
-        .fallback-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ff1a4c, #ff85a1);
-            z-index: -3;
-        }
-
-        /* Video Background for Logged-in - Optimized for mobile */
+        /* Video Background for Logged-in */
         .video-background-loggedin {
             position: fixed;
             top: 0;
@@ -51,8 +40,7 @@
             z-index: -2;
             display: none;
         }
-
-        /* Glassmorphic Login Container - Made responsive */
+        /* Glassmorphic Login Container */
         .login-container {
             position: absolute;
             top: 50%;
@@ -64,29 +52,28 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(12px);
             box-shadow: 0px 4px 15px rgba(255, 77, 109, 0.4);
-            width: 80%;
-            max-width: 350px;
+            width: 350px;
             text-align: center;
             transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
         }
 
-        /* Modified hover for mobile - Scale less to prevent overflow */
+        /* Floating Animation */
         .login-container:hover {
-            transform: translate(-50%, -50%) scale(1.05);
+            transform: translate(-50%, -50%) scale(1.2);
             box-shadow: 0px 6px 20px rgba(255, 77, 109, 0.6);
         }
-        
-        /* Login Header - Responsive font size */
+
+        /* Login Header */
         .login-container h2 {
             color: #ff4d6d;
-            font-size: clamp(20px, 5vw, 28px);
+            font-size: 28px;
             font-family: 'Italic', cursive;
             font-weight: bold;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
         }
 
-        /* Input Fields - Adjusted for better mobile layout */
+        /* Input Fields */
         .login-container input {
             width: 100%;
             padding: 10px;
@@ -99,7 +86,6 @@
             text-align: center;
             outline: none;
             transition: all 0.3s ease-in-out;
-            box-sizing: border-box; /* Prevents horizontal scrolling on mobile */
         }
 
         /* Placeholder Text */
@@ -113,9 +99,9 @@
             box-shadow: 0px 0px 12px rgba(255, 77, 109, 0.8);
         }
 
-        /* Animated Login Button - Fixed width issue for mobile */
+        /* Animated Login Button */
         .login-container button {
-            width: 70%;
+            width: 50%;
             padding: 10px;
             background: linear-gradient(45deg, #ff4d6d, #ff1a4c);
             color: white;
@@ -130,79 +116,76 @@
 
         .login-container button:hover {
             background: linear-gradient(45deg, #ff1a4c, #ff4d6d);
-            transform: scale(1.05);
+            transform: scale(1.1);
             box-shadow: 0px 6px 15px rgba(255, 77, 109, 0.7);
         }
 
-        /* Gallery Header - Made responsive */
+
         .gallery h2 {
-            font-family: 'Italic', cursive;
-            font-size: clamp(20px, 5vw, 28px);
+            font-family: 'Italic', cursive; /* Ancient font style */
+            font-size: 28px;
             font-weight: bold;
             color: white;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-            padding: 0 10px;
         }
 
-        /* Gallery Section - Optimized for mobile */
+        /* Gallery Section */
         .gallery {
             display: none;
             background: rgba(0, 0, 0, 0.7);
-            padding: 15px 0;
+            padding: 20px;
             border-radius: 10px;
             width: 100vw;
             height: 100vh;
             overflow-y: auto;
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             z-index: 10;
         }
 
-        /* Image Gallery Container - Made responsive */
+        /* Image Gallery Container */
         #image-gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: clamp(20px, 5vw, 90px);
-            width: 100%;
-            max-width: 1200px;
+            gap: 90px;
+            max-width: 100%;
             overflow-y: auto;
-            padding: 20px 10px;
-            margin-bottom: 80px; /* Space for logout button */
-            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 30px;
         }
 
-        /* 🎁 Gift Box Style - Made responsive */
+        /* 🎁 Gift Box Style */
         .image-container {
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: clamp(140px, 40vw, 200px);
-            height: clamp(220px, 60vw, 280px);
+            width: 200px;
+            height: 280px;
             padding: 15px;
             background: #f8d7da;
             border: 5px solid #ff4d6d;
             border-radius: 10px;
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
             transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
-            margin-bottom: 15px;
         }
 
-        /* 🎀 Ribbon Effect - Adjusted for mobile */
+        /* 🎀 Ribbon Effect */
         .image-container::before {
             content: "";
             position: absolute;
             top: -12px;
             left: 50%;
-            width: 70px;
-            height: 20px;
+            width: 100px;
+            height: 25px;
             background: #ff4d6d;
             border-radius: 5px;
             transform: translateX(-50%);
@@ -220,37 +203,34 @@
             transform: translateX(-50%);
         }
 
-        /* Image Inside the Gift Box - Made responsive */
+        /* Image Inside the Gift Box */
         .image-container img {
-            width: 90%;
-            max-width: 140px;
-            height: auto;
-            max-height: 190px;
+            width: 140px;
+            height: 190px;
             object-fit: contain;
-            transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+            transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
             border-radius: 5px;
         }
 
-        /* 🎁 Adjust Gift Box & Image on Hover - Modified for mobile */
+        /* 🎁 Adjust Gift Box & Image on Hover */
         .image-container:hover {
-            transform: scale(1.05);
-            height: auto;
+            transform: scale(1.1);
+            height: 320px;
         }
 
         .image-container:hover img {
-            transform: scale(1.2);
+            transform: scale(1.5);
         }
 
-        /* Fixed blur effect for other images */
-        #image-gallery:hover .image-container:not(:hover) img {
+        /* Blur other images when hovering on one */
+        .image-container:not(:hover) img {
             filter: blur(2px) brightness(1.2);
             opacity: 0.9;
         }
 
-        /* Logout Button - Fixed positioning for mobile visibility */
+        /* Logout Button */
         .logout-button {
-            width: 80%;
-            max-width: 220px;
+            width: 220px;
             padding: 12px 22px;
             background: #ff4d6d;
             color: white;
@@ -260,42 +240,35 @@
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s ease-in-out;
-            margin: 0;
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 20;
+            margin-top: 20px;
         }
 
         .logout-button:hover {
             background: #ff1a4c;
         }
 
-        /* Secret Message Button - Enhanced for mobile */
+        /* Secret Message Button - Enhanced visibility */
         .secret-message-btn {
             position: absolute;
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            padding: 8px 15px;
+            padding: 10px 20px;
             background: linear-gradient(45deg, #ff4d6d, #ff1a4c);
             color: white;
             border: none;
             border-radius: 50px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            opacity: 1;
+            opacity: 1; /* Always visible now */
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             box-shadow: 0px 4px 12px rgba(255, 77, 109, 0.7);
             z-index: 2;
             animation: pulse-glow 2s infinite;
-            width: 90%;
-            max-width: 150px;
         }
 
-        /* Heart icon in button - Enhanced visibility */
+        /* Modified: Make heart icon in button more visible */
         .secret-message-btn .heart-icon {
             background-color: transparent;
             display: inline-block;
@@ -304,7 +277,7 @@
         
         .secret-message-btn .heart-icon:before,
         .secret-message-btn .heart-icon:after {
-            background-color: white;
+            background-color: white; /* Changed to white for better visibility */
         }
 
         @keyframes pulse-glow {
@@ -315,10 +288,10 @@
 
         .secret-message-btn:hover {
             background: linear-gradient(45deg, #ff1a4c, #ff4d6d);
-            transform: translateX(-50%) scale(1.05);
+            transform: translateX(-50%) scale(1.1);
         }
 
-        /* Love Message Modal - Optimized for mobile */
+        /* Love Message Modal - MODIFIED: Darker background */
         .love-message-modal {
             display: none;
             position: fixed;
@@ -326,7 +299,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.9); /* Darker background */
             backdrop-filter: blur(8px);
             z-index: 100;
             justify-content: center;
@@ -335,13 +308,12 @@
             overflow: hidden;
         }
 
-        /* Ribbon Unwrapping Effect Container - Made responsive */
+        /* Ribbon Unwrapping Effect Container */
         .ribbon-container {
             position: relative;
-            width: 90%;
+            width: 80%;
             max-width: 600px;
-            height: auto;
-            aspect-ratio: 3/2;
+            height: 400px;
             perspective: 1000px;
             margin-bottom: 50px;
         }
@@ -384,33 +356,32 @@
             transform: rotateX(0deg);
         }
 
-        /* Enhanced back panel for better message visibility */
+        /* MODIFIED: Enhanced back panel for better message visibility */
         .ribbon-box-back {
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(12px);
             transform: rotateX(180deg);
             padding: 30px;
             border: 3px solid #ff4d6d;
+            /* Added glowing effect after unwrapping */
             box-shadow: 0 0 30px rgba(255, 77, 109, 0.8);
             animation: glow-effect 2s infinite alternate;
-            overflow-y: auto;
         }
 
+        /* Added: Glowing animation for the message box */
         @keyframes glow-effect {
             from { box-shadow: 0 0 20px rgba(255, 77, 109, 0.6); }
             to { box-shadow: 0 0 40px rgba(255, 77, 109, 0.9); }
         }
 
-        /* Ribbon on the gift box - Made responsive */
+        /* Ribbon on the gift box */
         .ribbon {
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 30%;
-            max-width: 120px;
-            height: 30%;
-            max-height: 120px;
+            width: 120px;
+            height: 120px;
             z-index: 2;
         }
 
@@ -419,8 +390,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 20%;
-            max-width: 30px;
+            width: 30px;
             height: 100%;
             background: #ff4d6d;
             z-index: 1;
@@ -432,8 +402,7 @@
             left: 0;
             transform: translateY(-50%);
             width: 100%;
-            height: 20%;
-            max-height: 30px;
+            height: 30px;
             background: #ff4d6d;
             z-index: 1;
         }
@@ -443,10 +412,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 40%;
-            max-width: 50px;
-            height: 40%;
-            max-height: 50px;
+            width: 50px;
+            height: 50px;
             background: #ff1a4c;
             border-radius: 50%;
             z-index: 3;
@@ -458,14 +425,12 @@
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: clamp(16px, 4vw, 20px);
+            font-size: 20px;
             font-weight: bold;
             color: #ff1a4c;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
             animation: pulse-text 1.5s infinite;
             font-family: 'Great Vibes', cursive;
-            width: 100%;
-            text-align: center;
         }
 
         @keyframes pulse-text {
@@ -474,10 +439,8 @@
         }
 
         .message-image {
-            width: 40%;
-            max-width: 180px;
-            height: auto;
-            max-height: 220px;
+            width: 180px;
+            height: 220px;
             object-fit: contain;
             border-radius: 10px;
             border: 3px solid #ff4d6d;
@@ -490,20 +453,19 @@
             transform: scale(1.1);
         }
 
-        /* Enhanced love message visibility */
+        /* MODIFIED: Enhanced love message visibility */
         .love-message {
             font-family: 'Great Vibes', cursive;
-            font-size: clamp(18px, 4vw, 24px);
+            font-size: 24px;
             color: white;
             margin: 20px 0;
             line-height: 1.5;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            min-height: 100px;
+            min-height: 100px; /* Ensures consistent height during typing animation */
             background: rgba(0, 0, 0, 0.5);
             padding: 15px;
             border-radius: 10px;
             max-width: 90%;
-            overflow-wrap: break-word;
         }
 
         /* Typing cursor animation */
@@ -532,8 +494,6 @@
             border: none;
             cursor: pointer;
             transition: transform 0.3s;
-            z-index: 10;
-            padding: 5px 10px; /* Larger tap target for mobile */
         }
 
         .close-message:hover {
@@ -541,7 +501,7 @@
             color: #ff4d6d;
         }
 
-        /* Front close button styles - Improved for mobile */
+        /* NEW: Front close button styles */
         .close-message-front {
             position: absolute;
             top: 10px;
@@ -554,7 +514,6 @@
             transition: transform 0.3s;
             z-index: 5;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            padding: 5px 10px; /* Larger tap target for mobile */
         }
 
         .close-message-front:hover {
@@ -597,7 +556,7 @@
             }
         }
 
-        /* CSS heart - Enhanced for visibility */
+        /* CSS heart - MODIFIED for better visibility */
         .heart-icon {
             position: relative;
             display: inline-block;
@@ -627,7 +586,7 @@
             transform-origin: 100% 100%;
         }
 
-        /* Style for pure black background when typing */
+        /* New style for pure black background when typing */
         .typing-mode .ribbon-box-back {
             background: #000000;
             border: none;
@@ -637,66 +596,20 @@
             background: transparent;
             border: none;
         }
-
-        /* Media queries for better responsiveness */
-        @media (max-width: 768px) {
-            /* Further adjustments for tablet */
-            .image-container {
-                width: clamp(120px, 40vw, 180px);
-                height: clamp(180px, 50vw, 250px);
-            }
-            
-            .image-container:hover {
-                transform: scale(1.03);
-            }
-            
-            .image-container:hover img {
-                transform: scale(1.1);
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* Adjustments for mobile phones */
-            #image-gallery {
-                gap: 20px;
-            }
-            
-            .image-container {
-                width: clamp(100px, 40vw, 150px);
-                height: clamp(150px, 50vw, 220px);
-                margin-bottom: 30px;
-            }
-
-            .secret-message-btn {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-            
-            .love-message {
-                font-size: 16px;
-            }
-
-            .unwrap-text {
-                font-size: 14px;
-                bottom: 10px;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Fallback background for devices that can't play videos -->
-    <div class="fallback-background"></div>
 
     <!-- Video Background (Login Page) -->
-    <video autoplay loop muted playsinline class="video-background" id="login-video">
+    <video autoplay loop muted class="video-background" id="login-video">
         <source src="images/login.mp4" type="video/mp4">
-        <!-- Your browser does not support the video tag. -->
+        Your browser does not support the video tag.
     </video>
 
     <!-- Video Background (After Login) -->
-    <video autoplay loop muted playsinline class="video-background-loggedin" id="loggedin-video">
+    <video autoplay loop muted class="video-background-loggedin" id="loggedin-video">
         <source src="images/videoplayback.mp4" type="video/mp4">
-        <!-- Your browser does not support the video tag. -->
+        Your browser does not support the video tag.
     </video>
 
     <!-- Login Form -->
@@ -719,7 +632,7 @@
         <div class="ribbon-container" id="ribbon-container">
             <div class="ribbon-box" id="ribbon-box">
                 <div class="ribbon-box-front">
-                    <!-- Close button to the front side -->
+                    <!-- NEW: Added close button to the front side -->
                     <button class="close-message-front" onclick="closeMessage()">&times;</button>
                     <div class="ribbon">
                         <div class="ribbon-vertical"></div>
@@ -786,27 +699,12 @@
 
         // Initialize both screens to not display to prevent flashing
         document.addEventListener("DOMContentLoaded", function() {
-            // Fix video playback on mobile
-            const videos = document.querySelectorAll('video');
-            videos.forEach(video => {
-                video.setAttribute('playsinline', '');
-                video.setAttribute('muted', '');
-                video.setAttribute('autoplay', '');
-                video.muted = true;
-                video.play().catch(e => {
-                    console.log("Auto-play prevented, user interaction required.");
-                });
-            });
-            
             // Hide both views initially
             document.getElementById('login-container').style.display = 'none';
             document.getElementById('gallery').style.display = 'none';
             
             // Check login state
             checkLoginState();
-            
-            // Load gallery images
-            loadGalleryImages();
         });
 
         // Variable to track current typing animation
@@ -849,204 +747,313 @@
         function showGallery() {
             document.getElementById('login-container').style.display = 'none';
             document.getElementById('gallery').style.display = 'flex';
+            document.getElementById('login-video').style.display = 'none';
+            document.getElementById('loggedin-video').style.display = 'block';
             
-            const loginVideo = document.getElementById('login-video');
-            const loggedinVideo = document.getElementById('loggedin-video');
-            
-            loginVideo.style.display = 'none';
-            loggedinVideo.style.display = 'block';
-            loggedinVideo.play().catch(e => {
-                console.log("Auto-play prevented after login, user interaction required.");
-            });
+            // Load gallery images if not already loaded
+            if (document.getElementById('image-gallery').children.length === 0) {
+                loadGalleryImages();
+            }
         }
 
         function showLogin() {
-            document.getElementById('login-container').style.display = 'block';
             document.getElementById('gallery').style.display = 'none';
+            document.getElementById('login-container').style.display = 'block';
+            document.getElementById('login-video').style.display = 'block';
+            document.getElementById('loggedin-video').style.display = 'none';
+        }
+        
+        // Function to animate typing effect - FIXED to prevent continuation issues
+        function typeWriter(text, element, speed = 50, index = 0) {
+            // Clear any existing timeouts to prevent continuation of old messages
+            if (currentTypingTimeout) {
+                clearTimeout(currentTypingTimeout);
+            }
             
-            const loginVideo = document.getElementById('login-video');
-            const loggedinVideo = document.getElementById('loggedin-video');
+            // Reset the element's contents when starting from the beginning
+            if (index === 0) {
+                element.innerHTML = '';
+            }
             
-            loggedinVideo.style.display = 'none';
-            loginVideo.style.display = 'block';
-            loginVideo.play().catch(e => {
-                console.log("Auto-play prevented on login screen, user interaction required.");
-            });
+            if (index < text.length) {
+                // Check if we're at an HTML tag
+                if (text.charAt(index) === '<') {
+                    // Find the end of the tag
+                    const endIndex = text.indexOf('>', index);
+                    if (endIndex !== -1) {
+                        // Add the entire tag at once
+                        const tag = text.substring(index, endIndex + 1);
+                        element.innerHTML += tag;
+                        index = endIndex + 1;
+                    } else {
+                        // If no closing bracket, just add the character
+                        element.innerHTML += text.charAt(index);
+                        index++;
+                    }
+                } else {
+                    // Add one character
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                }
+                
+                // Store the timeout ID so we can clear it if needed
+                currentTypingTimeout = setTimeout(() => typeWriter(text, element, speed, index), speed);
+            } else {
+                // Hide the cursor when typing is complete
+                document.getElementById('typing-cursor').style.display = 'none';
+                
+                // Remove typing mode class when done
+                document.getElementById('ribbon-container').classList.remove('typing-mode');
+                
+                // Clear the typing timeout reference
+                currentTypingTimeout = null;
+            }
         }
 
-        function loadGalleryImages() {
-            const gallery = document.getElementById('image-gallery');
-            gallery.innerHTML = ''; // Clear any existing content
-            
-            // Loop through loveData to create image containers
-            loveData.forEach((item, index) => {
-                // Create container for each image
-                const container = document.createElement('div');
-                container.className = 'image-container';
-                
-                // Create image element
-                const img = document.createElement('img');
-                img.src = item.image;
-                img.alt = `Love Memory ${index + 1}`;
-                container.appendChild(img);
-                
-                // Create secret message button
-                const secretBtn = document.createElement('button');
-                secretBtn.className = 'secret-message-btn';
-                secretBtn.innerHTML = 'Secret Message <span class="heart-icon"></span>';
-                secretBtn.onclick = function() { showLoveMessage(index); };
-                container.appendChild(secretBtn);
-                
-                // Add the container to the gallery
-                gallery.appendChild(container);
-            });
-        }
-
-        function showLoveMessage(index) {
-            const messageModal = document.getElementById('love-message-modal');
-            const ribbonBox = document.getElementById('ribbon-box');
-            const loveMessage = document.getElementById('love-message');
+        // Function to show message modal with ribbon unwrapping effect
+        function showMessage(index) {
+            const modal = document.getElementById('love-message-modal');
+            const messageText = document.getElementById('love-message');
             const modalImageFront = document.getElementById('modal-image-front');
             const modalImageBack = document.getElementById('modal-image-back');
             const typingCursor = document.getElementById('typing-cursor');
+            const ribbonBox = document.getElementById('ribbon-box');
+            const ribbonContainer = document.getElementById('ribbon-container');
             
-            // Reset previous state
+            // Clear any ongoing typing animation
+            if (currentTypingTimeout) {
+                clearTimeout(currentTypingTimeout);
+                currentTypingTimeout = null;
+            }
+            
+            // Reset the message content and ribbon state
+            messageText.innerHTML = '';
+            typingCursor.style.display = 'inline-block';
             ribbonBox.classList.remove('unwrapped');
-            ribbonBox.classList.remove('typing-mode');
-            loveMessage.innerHTML = '';
-            typingCursor.style.display = 'none';
+            ribbonContainer.classList.remove('typing-mode');
             
-            // Set the corresponding image and message
+            // Store the current index to reference the correct message
+            ribbonBox.dataset.messageIndex = index;
+            
+            // Set the images using our loveData array
             modalImageFront.src = loveData[index].image;
             modalImageBack.src = loveData[index].image;
             
             // Display the modal
-            messageModal.style.display = 'flex';
+            modal.style.display = 'flex';
             
-            // Add click event to unwrap the ribbon box
-            const ribbonContainer = document.getElementById('ribbon-container');
-            ribbonContainer.onclick = function() {
-                if (!ribbonBox.classList.contains('unwrapped')) {
-                    unwrapRibbon(index);
+            // Create celebration effects
+            createConfetti();
+            createHearts();
+            
+            // Add click event to unwrap the ribbon
+            ribbonBox.onclick = function(event) {
+                // Prevent the click from triggering if it's on the close button
+                if (event.target.className === 'close-message-front') {
+                    return;
+                }
+                
+                if (!this.classList.contains('unwrapped')) {
+                    this.classList.add('unwrapped');
+                    
+                    // Start typing the message after the ribbon unwraps
+                    setTimeout(() => {
+                        // Add typing mode class to change background when typing begins
+                        ribbonContainer.classList.add('typing-mode');
+                        // Use the message from our loveData array
+                        typeWriter(loveData[index].message, messageText, 50);
+                    }, 1000); // Delay to let the unwrapping animation finish
                 }
             };
         }
 
-        function unwrapRibbon(index) {
-            const ribbonBox = document.getElementById('ribbon-box');
-            ribbonBox.classList.add('unwrapped');
-            
-            // Add typing-mode class for pure black background
-            ribbonBox.classList.add('typing-mode');
-            
-            // Display typing cursor
-            const typingCursor = document.getElementById('typing-cursor');
-            typingCursor.style.display = 'inline-block';
-            
-            // Clear any existing typing animation
-            if (currentTypingTimeout) {
-                clearTimeout(currentTypingTimeout);
-            }
-            
-            // Start the typing animation after a short delay
-            setTimeout(() => {
-                typeMessage(loveData[index].message, 0);
-                createConfetti();
-                createFloatingHearts();
-            }, 1500);
-        }
-
-        function typeMessage(message, index) {
-            const loveMessage = document.getElementById('love-message');
-            const typingCursor = document.getElementById('typing-cursor');
-            const ribbonBox = document.getElementById('ribbon-box');
-            
-            if (index < message.length) {
-                if (message.substring(index).startsWith("<span class='heart-icon'>")) {
-                    // Add the entire heart icon span at once
-                    loveMessage.innerHTML += "<span class='heart-icon'></span>";
-                    // Move index past the heart icon
-                    index += 30; // Length of "<span class='heart-icon'></span>"
-                } else {
-                    loveMessage.innerHTML += message.charAt(index);
-                    index++;
-                }
-                
-                const typingSpeed = Math.random() * 50 + 30; // Random typing speed for realism
-                currentTypingTimeout = setTimeout(() => typeMessage(message, index), typingSpeed);
-            } else {
-                // Typing finished
-                typingCursor.style.display = 'none';
-                ribbonBox.classList.remove('typing-mode');
-            }
-        }
-
+        // Close message modal
         function closeMessage() {
-            const messageModal = document.getElementById('love-message-modal');
-            messageModal.style.display = 'none';
-            
-            // Clear any existing typing animation
-            if (currentTypingTimeout) {
-                clearTimeout(currentTypingTimeout);
-            }
+            document.getElementById('love-message-modal').style.display = 'none';
+            // Remove all confetti and hearts
+            document.querySelectorAll('.confetti, .floating-heart').forEach(el => el.remove());
         }
 
+        // Create confetti effect
         function createConfetti() {
-            const messageModal = document.getElementById('love-message-modal');
+            const colors = ['#ff4d6d', '#ff85a1', '#fbb1bd', '#ffd6e0', '#ffb3c1', '#ff1a4c'];
             
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 100; i++) {
                 const confetti = document.createElement('div');
                 confetti.className = 'confetti';
                 
                 // Random properties
                 confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.backgroundColor = getRandomColor();
-                confetti.style.width = (Math.random() * 10 + 5) + 'px';
-                confetti.style.height = (Math.random() * 10 + 5) + 'px';
-                confetti.style.opacity = Math.random() + 0.5;
-                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.opacity = Math.random() * 0.6 + 0.4;
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
                 
-                messageModal.appendChild(confetti);
+                // Different shapes
+                if (Math.random() > 0.6) {
+                    confetti.style.borderRadius = '50%';
+                } else if (Math.random() > 0.5) {
+                    confetti.style.transform = 'rotate(45deg)';
+                }
                 
-                // Remove after animation
+                document.body.appendChild(confetti);
+                
+                // Remove confetti after animation completes
                 setTimeout(() => {
                     confetti.remove();
                 }, 5000);
             }
         }
 
-        function createFloatingHearts() {
-            const messageModal = document.getElementById('love-message-modal');
-            
-            for (let i = 0; i < 20; i++) {
+        // Create floating hearts using CSS hearts instead of emoji
+        function createHearts() {
+            for (let i = 0; i < 50; i++) {
                 const heart = document.createElement('div');
-                heart.className = 'floating-heart';
-                heart.innerHTML = '❤';
+                heart.className = 'heart-icon floating-heart';
                 
                 // Random properties
                 heart.style.left = Math.random() * 100 + 'vw';
-                heart.style.bottom = '-50px';
-                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
-                heart.style.opacity = Math.random() + 0.5;
-                heart.style.animationDuration = (Math.random() * 5 + 3) + 's';
+                heart.style.top = Math.random() * 100 + 'vh';
+                heart.style.transform = 'scale(' + (Math.random() * 1.5 + 0.5) + ')';
+                heart.style.animationDuration = Math.random() * 5 + 3 + 's';
                 
-                messageModal.appendChild(heart);
+                document.body.appendChild(heart);
                 
-                // Remove after animation
+                // Remove heart after animation completes
                 setTimeout(() => {
                     heart.remove();
                 }, 8000);
             }
         }
 
-        function getRandomColor() {
-            // Generate pastel colors
-            const colors = [
-                '#ff6b81', '#ff7979', '#ffbe76', '#f6e58d', 
-                '#badc58', '#7ed6df', '#e056fd', '#686de0'
+        // Main window.onload function - consolidated from the multiple versions
+        window.onload = function() {
+            // First, load the images for the gallery
+            let images = [
+                'images/image1.jpeg',
+                'images/image2.jpeg',
+                'images/image3.jpeg',
+                'images/image4.jpeg',
+                'images/image5.jpeg',
+                'images/image6.jpeg',
+                'images/image7.jpeg',
+                'images/image8.jpeg',
+                'images/image9.jpeg',
+                'images/image10.jpeg',
             ];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
+
+            let gallery = document.getElementById('image-gallery');
+            // Clear the gallery first to avoid duplicate images
+            gallery.innerHTML = '';
+            
+            // Then add all images with secret message buttons
+            images.forEach((src, index) => {
+                let div = document.createElement('div');
+                div.className = 'image-container';
+
+                let img = document.createElement('img');
+                img.src = src;
+                
+                let btn = document.createElement('button');
+                btn.className = 'secret-message-btn';
+                btn.innerHTML = 'Secret Message <span class="heart-icon"></span>';
+                btn.onclick = function() { showMessage(index); };
+
+                div.appendChild(img);
+                div.appendChild(btn);
+                gallery.appendChild(div);
+            });
+
+            // Check login status and show appropriate screen
+            let isLoggedIn = localStorage.getItem("loggedIn") === "true";
+            
+            // Apply the correct visibility based on login status
+            if (isLoggedIn) {
+                showGallery();
+            } else {
+                showLogin();
+            }
+        };
+        // Consistent use of localStorage (or sessionStorage) for login persistence
+function login() {
+    let username = document.getElementById('username').value.trim();
+    let password = document.getElementById('password').value;
+
+    if (username !== "mylove") {
+        alert('Incorrect username! Try again.');
+        return;
+    }
+
+    if (password !== "love123") {
+        alert('Wrong Secret Code! Try Again');
+        return;
+    }
+
+    // Use sessionStorage instead of localStorage to make login session-based
+    sessionStorage.setItem("loggedIn", "true");
+    showGallery();
+}
+
+function logout() {
+    // Clear the login state from sessionStorage
+    sessionStorage.removeItem("loggedIn");
+    showLogin();
+}
+
+// Check login state using sessionStorage in window.onload
+window.onload = function() {
+    // Load images for the gallery
+    loadImages();
+    
+    // Check login status from sessionStorage instead of localStorage
+    let isLoggedIn = sessionStorage.getItem("loggedIn") === "true";
+    
+    if (isLoggedIn) {
+        showGallery();
+    } else {
+        showLogin();
+    }
+};
+
+function loadImages() {
+    let images = [
+        'images/image1.jpeg',
+        'images/image2.jpeg',
+        'images/image3.jpeg',
+        'images/image4.jpeg',
+        'images/image5.jpeg',
+        'images/image6.jpeg',
+        'images/image7.jpeg',
+        'images/image8.jpeg',
+        'images/image9.jpeg',
+        'images/image10.jpeg',
+    ];
+
+    let gallery = document.getElementById('image-gallery');
+    gallery.innerHTML = ''; // Clear existing images to prevent duplication
+
+    images.forEach((src, index) => {
+        let div = document.createElement('div');
+        div.className = 'image-container';
+
+        let img = document.createElement('img');
+        img.src = src;
+        img.alt = "Love Memory " + (index + 1);
+        
+        let btn = document.createElement('button');
+        btn.className = 'secret-message-btn';
+        btn.innerHTML = 'Secret Message <span class="heart-icon"></span>';
+        btn.onclick = function() { showMessage(index); };
+
+        div.appendChild(img);
+        div.appendChild(btn);
+        gallery.appendChild(div);
+    });
+}
+
+
     </script>
+
 </body>
 </html>
